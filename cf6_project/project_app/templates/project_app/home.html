@@ -1,0 +1,16 @@
+{% extends "project_app/base.html" %}
+
+{% block content %}
+    <h1>To-Do App Home</h1>
+    {% for to_do in to_do %}
+        <div class="card my-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ to_do.title }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ to_do.author }}</h6>
+              <p class="card-text">{{ to_do.description }}</p>
+              <h6 class="card-subtitle mb-2 text-muted">{{ to_do.updated_at|date:"F d, Y" }}</h6>
+              <a href="{% url 'project_detail' to_do.pk %}" class="card-link">View To-Do</a>
+            </div>
+          </div>
+    {% endfor %}
+{% endblock content %}
