@@ -66,6 +66,7 @@ python manage.py runserver
 
 Then, visit http://127.0.0.1:8000 in your browser to view the app.
 
+
 Usage
 
 Register an account: Users must register to create, update, and delete tasks.
@@ -75,7 +76,11 @@ Login: After registering, log in to access the dashboard.
 Manage tasks:
 
 Create new tasks.
+
 View task details.
+
 Update task information.
+
 Delete tasks when no longer needed.
+
 Profile: View user information through the profile page.
