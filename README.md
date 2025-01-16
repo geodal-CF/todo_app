@@ -35,6 +35,7 @@ Frontend Design
 Bootstrap: The app's interface is built using the Bootstrap framework, ensuring a responsive design that looks good on both mobile and desktop devices.
 
 Installation
+
 To get the app up and running locally, follow these steps:
 
 1. Clone the repository
@@ -66,9 +67,13 @@ python manage.py runserver
 Then, visit http://127.0.0.1:8000 in your browser to view the app.
 
 Usage
+
 Register an account: Users must register to create, update, and delete tasks.
+
 Login: After registering, log in to access the dashboard.
+
 Manage tasks:
+
 Create new tasks.
 View task details.
 Update task information.
