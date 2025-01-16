@@ -1,24 +1,37 @@
 This is a simple and intuitive To-Do app built with Django, Bootstrap, and Python. This app allows you to create, update, view and delete tasks, helping you stay organized and manage your tasks effectively.
 
 Features
+
 User Authentication: Users can register, login, and manage their profiles.
+
 Task Management: Users can create, update, and delete tasks.
+
 Task List: View a list of tasks with details such as title, description, and the author of each task.
+
 CRUD Operations: Full Create, Read, Update, Delete functionality for tasks.
+
 Responsive Design: Built with Bootstrap for a clean and responsive interface.
-How It Is Built
-1. Model-View-Template (MVT) Architecture
+
 The app follows Django's MVT architecture:
 
 Model: Defines the data structure, such as the To_do model for tasks.
+
 View: Handles the logic and retrieves data from the models. For example, the ToDoListView and ToDoDetailView are class-based views used to display the list of tasks and task details.
+
 Template: Manages the user interface. The templates include HTML files that are styled with Bootstrap.
-2. Django Features Used
+
+Django Features Used
+
 Authentication: The app uses Django's built-in authentication system to manage users, allowing them to register, log in, and log out.
+
 CRUD Functionality: The app implements CRUD functionality for tasks using Django’s class-based views (CBVs).
+
 Crispy-Forms: The app uses crispy-forms to render HTML forms with a Bootstrap layout.
+
 Database: The app uses SQLite as the default database for development.
-3. Frontend Design
+
+Frontend Design
+
 Bootstrap: The app's interface is built using the Bootstrap framework, ensuring a responsive design that looks good on both mobile and desktop devices.
 
 Installation
