@@ -39,10 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # local apps
-    'project_app',
-    'users',
-    'crispy_forms',
-    'crispy_bootstrap5',
+    'project_app',  # Custom app for project logic
+    'users',    # Custom app for user authentication and management
+    'crispy_forms', # Third-party app for better form rendering
+    'crispy_bootstrap5',    # Boostrap 5 support for crispy forms
 ]
 
 MIDDLEWARE = [
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Istanbul' # Greek timezone
+TIME_ZONE = 'Europe/Athens' # Greek timezone set for this project
 
 USE_I18N = True
 
@@ -128,10 +128,14 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#Configuration for crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
+#Allowed template packs for crispy forms
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
+#Redirect URL after successful login
 LOGIN_REDIRECT_URL = 'project_home'
 
+#URL to redirect to for login when not authenticated
 LOGIN_URL = 'user-login'

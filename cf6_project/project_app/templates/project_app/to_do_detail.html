@@ -11,6 +11,7 @@
     <h6 class="card-subtitle mb-2 text-muted">{{ object.updated_at|date:"F d, Y" }}</h6>
   </div>
 </div>
+<!-- Checks if the current user is the author of the To-Do item or has staff privileges. -->
 {% if object.author == user or user.is_staff %}
 <div class="col-4">
   <a class="btn btn-outline-info" href="{% url 'project_update' object.id %}">Update</a>

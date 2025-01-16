@@ -1,10 +1,12 @@
 {% extends "project_app/base.html" %}
 
+<!-- Load the crispy forms template tags to render forms with crispy styling. -->
 {% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container">
   <form method="POST">
+    <!-- Include a CSRF token for security purposes. -->
     {% csrf_token %}
     <fieldset class="form-group">
       <legend class="border-bottom mb-4">Sign up!</legend>

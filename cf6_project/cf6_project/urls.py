@@ -21,9 +21,9 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('project_app.urls')),
-    path('register/', user_views.register, name="user-register"),
-    path('login/', auth_views.LoginView.as_view(template_name="users/login.html"), name="user-login"),
-    path('logout/', user_views.logout_view, name="user-logout"),
-    path('profile/', user_views.profile, name="user-profile"),
+    path('', include('project_app.urls')),  # Include URLs from the 'project_app' app (main application logic)
+    path('register/', user_views.register, name="user-register"),   # User registration page
+    path('login/', auth_views.LoginView.as_view(template_name="users/login.html"), name="user-login"),  # Login page using Django's built-in LoginView with a custom template
+    path('logout/', user_views.logout_view, name="user-logout"),    # Logout page using a custom logout view
+    path('profile/', user_views.profile, name="user-profile"),  # User profile page
 ]
