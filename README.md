@@ -1,5 +1,4 @@
-To-Do App
-A simple and intuitive To-Do app built with Django, Bootstrap, and Python. This app allows users to create, update, view, and delete tasks, helping you stay organized and manage your tasks effectively.
+This is a simple and intuitive To-Do app built with Django, Bootstrap, and Python. This app allows you to create, update, view and delete tasks, helping you stay organized and manage your tasks effectively.
 
 Features
 User Authentication: Users can register, login, and manage their profiles.
