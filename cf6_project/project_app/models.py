@@ -7,10 +7,10 @@ class To_do(models.Model):
   title = models.CharField(max_length=100)
   description = models.TextField()  # No character limit
 
-  author = models.ForeignKey(User, on_delete=models.CASCADE)  # A foreign key to the User model, linking each To-Do item to its creator. If the associated user is deleted, their To-Do items are also deleted.
+  author = models.ForeignKey(User, on_delete=models.CASCADE)  # A foreign key to the User model, linking each To-Do item to its unique creator. If the associated user is deleted, their To-Do items are also deleted.
 
   created_at = models.DateTimeField(auto_now_add=True)  # Automatically set when the object is first created.
-  updated_at = models.DateTimeField(auto_now=True)  # Automatically updated whenever the object is saved.
+  updated_at = models.DateTimeField(auto_now=True)  # Automatically updated whenever the object is updated.
 
   def get_absolute_url(self):
         """
