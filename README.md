@@ -1,10 +1,10 @@
-This is a simple and intuitive To-Do app built with Django, Python and Bootstrap (I used Visual Studio Code). This app allows you to create, update, view and delete tasks, helping you stay organized and manage your tasks effectively.
+This is a simple and intuitive To-Do app built with Django, Python and Bootstrap in Visual Studio Code. This app allows you to create, update, view and delete tasks, helping you stay organized and manage your tasks effectively.
 
 **Features** 
 
 - User Authentication: Users can register, login, and manage their profiles.
 
-- Task Management: Users can create, update, and delete tasks.
+- Task Management: Users can create, update, and delete tasks (to-dos).
 
 - Task List: View a list of tasks with details such as title, description, and the author of each task.
 
@@ -22,11 +22,11 @@ The main app (project_app) is built within the virtual environment and it follow
 
 **Django Features Used**
 
-- Authentication: The app uses Django's built-in authentication system to manage users, allowing them to register, log in, and log out.
+- Authentication: The app uses Django's built-in authentication system to manage users, allowing them to register, log in and log out. The custom users app, built within the virtual environment, handles this feature using the MVT architecture.
 
 - CRUD Functionality: The app implements CRUD functionality for tasks using Django’s class-based views (CBVs).
 
-- Crispy-Forms: The app uses crispy-forms to render HTML forms with a Bootstrap layout.
+- Crispy-Forms: The app uses crispy-forms (third party app which requires installation) to render HTML forms with a Bootstrap layout.
 
 - Database: The app uses SQLite as the default database for development.
 
@@ -58,13 +58,13 @@ source venv/bin/activate  # For Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Apply database migrations
+4. Apply necessary migrations
 
 ```
 python manage.py migrate
 ```
 
-5. Create a superuser to access the Django admin panel. (You can also create some test users through the panel)
+5. Create a superuser to access the Django admin panel (you can also create some test users through the panel)
 
 ```
 python manage.py createsuperuser
@@ -76,23 +76,23 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Then, visit http://127.0.0.1:8000 in your browser to view the app.
+Then, visit http://127.0.0.1:8000 in your browser to view and run the app.
 
 
 **Usage**
 
-- Register an account: Users must register to create, update, and delete tasks.
+- Register an account: Users must register to create, update, and delete their tasks (to-dos).
 
-- Login: After registering, log in to access the dashboard.
+- Login: After registering, log in to access the app dashboard.
 
 Manage tasks:
 
 - Create new tasks.
 
-- View task details.
+- View tasks and their descriptions.
 
 - Update task information.
 
 - Delete tasks when no longer needed.
 
-- Profile: View user information through the profile page.
+- Profile: View basic user information through the profile page.
