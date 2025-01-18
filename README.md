@@ -1,4 +1,4 @@
-This is a simple and intuitive To-Do app built with Django, Bootstrap, and Python. This app allows you to create, update, view and delete tasks, helping you stay organized and manage your tasks effectively.
+This is a simple and intuitive To-Do app built with Django, Python and Bootstrap (I used Visual Studio Code). This app allows you to create, update, view and delete tasks, helping you stay organized and manage your tasks effectively.
 
 **Features** 
 
@@ -12,13 +12,13 @@ This is a simple and intuitive To-Do app built with Django, Bootstrap, and Pytho
 
 - Responsive Design: Built with Bootstrap for a clean and responsive interface.
 
-The app follows Django's MVT architecture:
+The main app (project_app) is built within the virtual environment and it follows Django's MVT architecture:
 
 - Model: Defines the data structure, such as the To_do model for tasks.
 
 - View: Handles the logic and retrieves data from the models. For example, the ToDoListView and ToDoDetailView are class-based views used to display the list of tasks and task details.
 
-- Template: Manages the user interface. The templates include HTML files that are styled with Bootstrap.
+- Template: Manages the user interface. The templates include HTML files that are styled with Bootstrap. The templates folder is created inside the project_app folder, so that the views are returning the corresponding templates when the pages are rendered.
 
 **Django Features Used**
 
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-5. Create a superuser to access the Django admin panel (optional)
+5. Create a superuser to access the Django admin panel. (You can also create some test users through the panel)
 
 ```
 python manage.py createsuperuser
