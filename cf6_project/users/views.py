@@ -10,10 +10,11 @@ def register(request):
     form = forms.UserRegisterForm(request.POST)
     if form.is_valid():
       form.save()
-      username = form.cleaned_data.get('username')    # will be available only if the form passes validation and cleaning of all the fields
+      username = form.cleaned_data.get('username')    # a dictionary of validated form input fields and their values, where the username is returned as an object
       messages.success(request, f"{username}, your account has been created! Please log in.")
       return redirect('user-login')
   else:
+    # if the form is not valid, user input is kept and the process can be continued until the form is valid
     form = forms.UserRegisterForm()
   return render(request, 'users/register.html', {'form': form})
 

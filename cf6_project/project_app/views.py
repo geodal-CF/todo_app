@@ -7,8 +7,8 @@ from . import models
 # Create your views here.
 # Function-based view for the home page
 def home(request):
-    to_do = models.To_do.objects.all()  # Retrieve all To-Do items from the database
-    context = {                         # Pass the items to the template as context
+    to_do = models.To_do.objects.all()  # Retrieves all To-Do items from the database
+    context = {                         # Passes the items to the template as context
         'to_do': to_do
     }
     return render(request, "project_app/home.html", context)
@@ -28,7 +28,7 @@ class ToDoCreateView(LoginRequiredMixin, CreateView):
     model = models.To_do
     fields = ['title', 'description']
 
-    # Set the author of the To-Do item to the currently logged-in user
+    # Sets the author of the To-Do item to the currently logged-in user
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -38,12 +38,12 @@ class ToDoUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = models.To_do
     fields = ['title', 'description']
 
-    # Ensure only the author of the To-Do item can update it
+    # Ensures only the author of the To-Do item can update it
     def test_func(self):
         to_do = self.get_object()
         return self.request.user == to_do.author
 
-    # Set the author of the To-Do item to the currently logged-in user
+    # Sets the author of the To-Do item to the currently logged-in user
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -53,7 +53,7 @@ class ToDoDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = models.To_do
     success_url = reverse_lazy('project_home')
 
-    # Ensure only the author of the To-Do item can delete it
+    # Ensures only the author of the To-Do item can delete it
     def test_func(self):
         to_do = self.get_object()
         return self.request.user == to_do.author
